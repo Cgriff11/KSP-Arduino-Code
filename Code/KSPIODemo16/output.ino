@@ -92,9 +92,12 @@ else
           MainControls(SAS, LOW); 
     else
           MainControls(SAS, HIGH);*/
-          
-
-         
+//============================================
+if (digitalRead(29))        //Action Group 1
+      MainControls(AGCustom1,HIGH)
+else
+      MainControls(AGCustom1,LOW)
+  
 //============================================
 if (digitalRead(30))        //Lights
       MainControls(LIGHTS, LOW);
@@ -154,6 +157,26 @@ if (digitalRead(42))        //Stage transition
       MainControls(STAGE, HIGH);
 else
       MainControls(STAGE, LOW);
+    //============================================
+if (digitalRead(43))        //Action Group 2
+      MainControls(AGCustom2,HIGH)
+else
+      MainControls(AGCustom2,LOW)
+//============================================
+if (digitalRead(44))        //Action Group 3
+      MainControls(AGCustom3,HIGH)
+else
+      MainControls(AGCustom3,LOW)
+//============================================
+if (digitalRead(45))        //Action Group 4
+      MainControls(AGCustom4,HIGH)
+else
+      MainControls(AGCustom4,LOW)
+//============================================
+if (digitalRead(46))        //Action Group 5
+      MainControls(AGCustom5,HIGH)
+else
+      MainControls(AGCustom5,LOW)
 //============================================
 if (digitalRead(47) == 0)        //Roll Right
       CPacket.Roll = constrain(map(   1024   ,0,1024,-1000,1000),-1000, 1000);
